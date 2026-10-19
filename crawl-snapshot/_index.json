@@ -1,0 +1,546 @@
+{
+ "/": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/lbc/academic_calendar": {
+  "status": 500,
+  "type": ""
+ },
+ "/lbc/ncc": {
+  "status": 500,
+  "type": ""
+ },
+ "/lbc/nss": {
+  "status": 500,
+  "type": ""
+ },
+ "/lbc/placements": {
+  "status": 500,
+  "type": ""
+ },
+ "/lbc/skill_development": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/lbc/sports": {
+  "status": 500,
+  "type": ""
+ },
+ "/lbc/value_addition": {
+  "status": 500,
+  "type": ""
+ },
+ "/pgcollege/Courses": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/Enter": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/about_iic": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/academiccom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/alumni": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/antiragging": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/bgv": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/bharat": {
+  "status": 404,
+  "type": ""
+ },
+ "/pgcollege/committees": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria1": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria2": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria3": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria4": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/criteria7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/cultural": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/1": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/10": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/11": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/12": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/13": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/14": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/2": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/3": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/4": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/8": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/department/9": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria1": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria2": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria3": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria4": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvcriteria7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/dvvquality": {
+  "status": 404,
+  "type": ""
+ },
+ "/pgcollege/eoa": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/examination": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/extended": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/facilites": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/gallery": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/grievance": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/griviance": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/internal": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/iqac": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/iqaccom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/lbctimes": {
+  "status": 200,
+  "type": "application/pdf"
+ },
+ "/pgcollege/login": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/minority": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/pgblog": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/poscos": {
+  "status": 404,
+  "type": ""
+ },
+ "/pgcollege/profile": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/projects": {
+  "status": 404,
+  "type": ""
+ },
+ "/pgcollege/quality": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/scholarship": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/scst": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/sportscom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/support": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pgcollege/women": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/pghome": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Arts": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Commerce": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Enter": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Languages": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Lifesciences": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/Management": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/academiccom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/alumni": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/antiragging": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/bgv": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/bharat": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/campus_glimpses": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/committees": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria1": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria2": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria3": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria4": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/criteria7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/cultural": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/12": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/13": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/department/8": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/depts": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria1": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria2": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria3": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria4": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria5": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria6": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/dvvcriteria7": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/examination": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/extended": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/facilites": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/ARTS": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/B. A. (Social Science)": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/B. Com.": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/B. Sc.": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/BBA": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/BCA": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/Library": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/faculty/sciences": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/gallery": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/griviance": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/internal": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/iqac": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/iqaccom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/lbctimes": {
+  "status": 200,
+  "type": "application/pdf"
+ },
+ "/ugcollege/login": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/minority": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/physical": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/poscos": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/profile": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/projects": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/quality": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/scholarship": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/scst": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/sportscom": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/support": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/ugblog": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ },
+ "/ugcollege/women": {
+  "status": 200,
+  "type": "text/html; charset=utf-8"
+ }
+}

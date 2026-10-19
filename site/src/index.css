@@ -1,0 +1,278 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — see the Home Page Design System.
+ * Roles: navy (= "ink", brand), gold (only accent), royal (links/hover only),
+ * mist (= "paper", page background), track (empty tracks), slate (body text).
+ */
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  --color-navy: #102a43;
+  --color-navy-2: #163a5c;
+  --color-navy-900: #0b2036;
+  --color-royal: #174ea6;
+  --color-gold: #d6ad60;
+  --color-gold-2: #e8cb8a;
+  --color-gold-soft: #f6ecd6;
+  --color-mist: #f4f7fb;
+  --color-track: #dce6f5;
+  --color-slate: #4a5872;
+  --color-ink: #1c2b3d;
+
+  --shadow-raised: 0 40px 80px -40px rgb(16 42 67 / 0.55);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* keep anchor targets clear of the fixed header (one row on phones, two from 1360px) */
+    scroll-padding-top: 92px;
+  }
+  @media (min-width: 1360px) {
+    html {
+      scroll-padding-top: 132px;
+    }
+  }
+  body {
+    @apply bg-mist font-sans text-slate antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+  /* headings inside white-text containers (navy bands, photos) stay white */
+  .text-white :where(h1, h2, h3, h4) {
+    color: inherit;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-variation-settings: 'opsz' 96, 'SOFT' 50;
+    font-weight: 480;
+    color: var(--color-navy);
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-navy);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  /* let grid items shrink so truncation and inner scrollers work on small screens */
+  .grid > * {
+    min-width: 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12;
+}
+@utility section-y {
+  @apply py-24 lg:py-32;
+}
+@utility display {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 96, 'SOFT' 50;
+  font-weight: 480;
+  letter-spacing: -0.015em;
+}
+@utility h-hero {
+  font-size: clamp(2.5rem, 6.4vw, 5.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+@utility h-section {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  line-height: 1.08;
+}
+@utility lede {
+  @apply max-w-[60ch] text-lg leading-[1.65] text-slate;
+}
+/* sentence-case meta label (no all caps, no tracking) */
+@utility eyebrow {
+  @apply inline-flex items-center gap-2.5 text-sm font-semibold text-royal;
+  &::before {
+    content: '';
+    @apply inline-block h-px w-7 bg-gold;
+  }
+}
+
+/* Buttons: lift 2px and a single sheen sweep on hover */
+@utility btn {
+  @apply relative inline-flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm font-bold transition duration-300 ease-out-expo hover:-translate-y-0.5;
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.35) 50%, transparent 70%);
+    transform: translateX(-120%);
+    pointer-events: none;
+  }
+  &:hover::after {
+    transform: translateX(120%);
+    transition: transform 0.9s var(--ease-out-expo);
+  }
+}
+@utility btn-gold {
+  @apply btn bg-gold text-navy shadow-[0_10px_30px_-8px_rgb(214_173_96/0.6)] hover:bg-gold-2;
+}
+@utility btn-navy {
+  @apply btn text-white;
+  background-image: linear-gradient(110deg, var(--color-navy) 0%, var(--color-navy) 45%, var(--color-royal) 100%);
+  background-size: 220% 100%;
+  background-position: 0% 0;
+  transition-property: background-position, transform;
+  &:hover {
+    background-position: 100% 0;
+  }
+}
+@utility btn-outline {
+  @apply btn border border-navy/25 text-navy hover:border-navy hover:bg-navy hover:text-white;
+}
+@utility btn-ghost {
+  @apply btn border border-white/50 text-white hover:border-white hover:bg-white/10;
+}
+@utility card {
+  @apply rounded-[24px] border border-navy/8 bg-white transition duration-300;
+}
+@utility raised {
+  box-shadow: var(--shadow-raised);
+}
+@utility glass {
+  @apply border border-white/20 bg-white/10 backdrop-blur-xl;
+}
+@utility navy-drift {
+  background-color: var(--color-navy);
+  background-image:
+    radial-gradient(60% 70% at 18% 12%, rgb(23 78 166 / 0.14), transparent 70%),
+    radial-gradient(45% 55% at 82% 88%, rgb(214 173 96 / 0.08), transparent 70%),
+    linear-gradient(125deg, #102a43 0%, #143452 45%, #112d47 70%, #102a43 100%);
+  background-size:
+    160% 160%,
+    160% 160%,
+    220% 220%;
+  animation: drift 26s ease-in-out infinite alternate;
+}
+@utility navy-flat {
+  background-color: var(--color-navy);
+  background-image:
+    radial-gradient(60% 70% at 18% 12%, rgb(23 78 166 / 0.14), transparent 70%),
+    linear-gradient(125deg, #102a43 0%, #143452 60%, #102a43 100%);
+}
+@utility prose-lbc {
+  & p {
+    @apply mb-4 leading-[1.65] text-slate;
+  }
+  & h3 {
+    @apply mt-10 mb-3 font-display text-2xl text-navy;
+  }
+  & h3:first-child {
+    @apply mt-0;
+  }
+  & ul {
+    @apply mb-5 grid gap-2;
+  }
+  & li {
+    @apply relative pl-6 leading-[1.65] text-slate;
+  }
+  & li::before {
+    content: '';
+    @apply absolute top-[0.62em] left-0 h-1.5 w-1.5 rotate-45 bg-gold;
+  }
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.fade-x {
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+@keyframes drift {
+  from {
+    background-position:
+      0% 0%,
+      100% 100%,
+      0% 50%;
+  }
+  to {
+    background-position:
+      30% 20%,
+      70% 80%,
+      100% 50%;
+  }
+}
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-y {
+  to {
+    transform: translateY(-50%);
+  }
+}
+@keyframes hero-zoom {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.06) translate3d(-1%, -0.6%, 0);
+  }
+}
+@keyframes sweep {
+  from {
+    transform: translateX(-60%) skewX(-18deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(260%) skewX(-18deg);
+    opacity: 0;
+  }
+}
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes pulse-once {
+  0% {
+    box-shadow: 0 0 0 0 rgb(214 173 96 / 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgb(214 173 96 / 0);
+  }
+}

@@ -1,0 +1,805 @@
+{
+ "ug": [
+  {
+   "slug": "admission",
+   "name": "Admission Committee",
+   "members": [
+    "Mr. A. Dhanaraju - Convenor",
+    "Mr. P Narasimha Rao - Member",
+    "Mr. B Srinivas Reddy - Member",
+    "Mr. J LakshmanaBabu - Member",
+    "Mr. N K Mahesh - Member"
+   ],
+   "roles": [
+    "To monitor Admissions",
+    "To conduct counselling & student induction programmes"
+   ],
+   "official": "https://lbc.edu.in/ugcollege/committees"
+  },
+  {
+   "slug": "anti-ragging",
+   "name": "Anti-Ragging & Disciplinary Committee",
+   "members": [
+    "Dr. Y. Srinivasa Rao – Physical Director",
+    "Smt. T. Sireesha – Lecturer, Ele. (UG)",
+    "Smt. G. Padma – Lecturer, Maths (UG)",
+    "Sri. B. Jagadeeswara Rao – Lecturer, Eco. (UG)",
+    "Dr. G. Satya Praveen – Assoc. Prof., English (PG)",
+    "Dr. Rama Goswami – Asst. Prof., MBA",
+    "Dr. K. Uma Nageswari – Asst. Prof., MBA",
+    "Smt. B. V. P. Latha – Asst. Prof., MCA"
+   ],
+   "roles": [
+    "To prevent, prohibit, and address all forms and instances of ragging within the college.",
+    "To educate students on the definition of ragging and what behaviours constitute it.",
+    "To inform students about the harmful effects of ragging and the potential legal consequences of engaging in such activities."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/antiragging"
+  },
+  {
+   "slug": "grievance-redressal",
+   "name": "Grievances & Redressal Committee",
+   "members": [
+    "Dr. G. S. K. Chakravarty - Principal - Convenor",
+    "Dr. R. V. H. Srikanth – Vice Principal",
+    "Smt. V. Subbalakshmi – Coordinator, IQAC",
+    "Dr. P. Surekha – HOD, Zoology (UG)",
+    "Sri. B. Srinivas Reddy – HOD, Commerce, UG",
+    "Sri. J. Lakshman Babu – HOD, Social Sciences",
+    "Sri. N. K. Mahesh – HOD, BBA",
+    "Sri. T. S. S. Sivaramayya – Asst. Prof., MCA",
+    "Sri. Ch. Suresh – Asst. Prof., MBA",
+    "Dr. p. KIran Kumari - Asst. Prof., Env.Studies"
+   ],
+   "roles": [
+    "To monitor grievances registered",
+    "To redress the grievances addressed"
+   ],
+   "official": "https://lbc.edu.in/ugcollege/griviance"
+  },
+  {
+   "slug": "icc",
+   "name": "Internal Compliance Committee (ICC)",
+   "members": [
+    "Prof. Surela Raj K. – HOD, English (PG) - Convenor",
+    "Dr. P. Surekha - VicePrincipal, UG - Member",
+    "Dr. E. Roopa Rani – Assoc. Prof., MBA - Member",
+    "Dr. S. Sharmila Begum - HOD, Biotechnology(PG) - Member"
+   ],
+   "roles": [
+    "To conduct awareness programmes",
+    "To redress women's problems and issues"
+   ],
+   "official": "https://lbc.edu.in/ugcollege/internal"
+  },
+  {
+   "slug": "entrepreneurship-cell",
+   "name": "Entrepreneurship Cell",
+   "members": [
+    "Dr. D. Vijayalakshmi - Assoc. Prof., MBA – Convener",
+    "Dr. S. Sharmila Begum - HOD, Biotechnology – Member",
+    "Dr. P. Nagavali - Assoc. Prof., MBA - Member",
+    "Dr. J. L. Purnima – Asst. Prof., BBA – Member",
+    "Mrs. K. Indira Priyadarshini - Asst. Prof., MBA – Member",
+    "Mr. R. Srinivasa Rao - Asst. Prof., Commerce - Member",
+    "Mr. B. Jagadeeswara Rao - Asst. Prof., Economics - member"
+   ],
+   "roles": [
+    "To foster an entrepreneurial culture among students.",
+    "To serve as a liaison between the college and industries.",
+    "To organise Entrepreneurship Awareness Camps, Entrepreneurship Development Programs, and Faculty Development initiatives.",
+    "To arrange visits to industries for aspiring entrepreneurs.",
+    "To conduct skill development training to promote self-employment.",
+    "To offer guidance and support to assist entrepreneurs in their rehabilitation.",
+    "To provide consultancy services tailored to the needs of industries and start-ups."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/Enter"
+  },
+  {
+   "slug": "iqac",
+   "name": "IQAC",
+   "members": [
+    "Dr. G. S. K. Chakravarty - Principal - Chairperson",
+    "Mrs. V. Subbalakshmi – Assistant Professor - Coordinator",
+    "Dr. G. Madhu Kumar - Secretary & Correspondent - Member-Management",
+    "Mrs. LakshmiMukkavalli - MD, Patra India - Nominee from Local Society, Student, Alumnus",
+    "Mr. R. Nanda Kishore - Industrialist - Nominee from Industry",
+    "Ms. PentakotaBhavana - Student - Member-Student",
+    "Mr. DoddaSampath Kumar - Student - Member-Student",
+    "Dr.R. Anjana - HOD-Management Studies - Member-Administration",
+    "Mr.M.A.Prasad - HOD-Computer Science - Member-Administration",
+    "Dr.B.Sudheer Kumar - HOD-Chemistry - Member-Administration",
+    "Mr. B. Srinivas Reddy -HOD - Commerce - Member-Administration",
+    "Mr. N. K. Mahesh -HOD – Business Administration - Member-Administration",
+    "Sri. J. Lakshman Babu – HOD-Social Sciences - Member-Administration",
+    "Dr. D.RajaNandan - R&D Cell Convenor - Member-Administration",
+    "Dr. D.Vijaya Lakshmi - EISC Convenor - Member-Administration",
+    "Mr. ShaikGowsiBabu - NSS Unit Officer - Member-Administration",
+    "Mrs. E TejaSwetha - SDC Coordinator - Member-Administration",
+    "Mr.D.VenuGopala Reddy - Office Superintendent - Member-Administration",
+    "Mr.S.Hari Krishna - Senior Administrative Officer - Member-Administration",
+    "Mrs.K.Rekha Rani - Placement Coordinator - Member-Parent",
+    "Mrs HusnaTasneem - Lecturer - Member-Technical Assistance",
+    "Mrs.K.Saritha - Assistant Professor - Member-Technical Assistance"
+   ],
+   "roles": [
+    "To coordinate the planning and implementation of quality improvement activities, such as staff training programmes, special development programmes for both slow and advanced learners, and refresher training sessions.",
+    "To prepare the agenda and minutes for meetings.",
+    "To organize expert lectures on professional development for teaching and non-teaching staff.",
+    "To develop and maintain an annual schedule of lectures.",
+    "To document the activities and initiatives of the Staff Academy.",
+    "To develop and apply quality benchmarks and parameters for various academic and administrative activities within the institution.",
+    "To disseminate information on various quality parameters in higher education.",
+    "To organize workshops and seminars on quality-related themes and promote quality circles.",
+    "To document the various programmes and activities that lead to quality improvement.",
+    "To serve as a nodal agency for the institution's quality-related activities.",
+    "To prepare the Annual Quality Assurance Report (AQAR) to be submitted to NAAC, based on established quality parameters.",
+    "To lead preparations for the NAAC assessment and accreditation process.",
+    "To organize expert lectures on competitive examinations for students."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/iqaccom"
+  },
+  {
+   "slug": "women-empowerment",
+   "name": "Women Empowerment Cell",
+   "members": [
+    "Dr. B. Madhavi - Asst. Prof., E.S – Convener",
+    "Mrs. V. Subba Lakshmi - Coordinator, IQAC - Member",
+    "Smt. I. Hymavathi - HOD, Comp. Sc. - Member",
+    "Dr. S. Sharmila Begum - HOD, Biotechnology - Member",
+    "Dr. R. Anjana - HOD, MBA - Member",
+    "Dr. Rama Goswami - Assoc. Prof., MBA - Member",
+    "Dr. D. Vijayalakshmi - Assoc. Prof, MBA - Member",
+    "Dr. P. V. S. Jyothi - Assoc. Prof., MBA - Member",
+    "Dr. J. L. Purnima - Asst.Prof, BBA - Member",
+    "Dr. K. Uma Nageswari - Assoc. Prof, MBA - Member"
+   ],
+   "roles": [
+    "To empower women to make life-determining decisions by addressing various societal challenges through education, awareness, literacy, and training initiatives."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/women"
+  },
+  {
+   "slug": "sports",
+   "name": "Sports Committee",
+   "members": [
+    "Dr. Y. Srinivasa Rao, Physical Director",
+    "Dr. B. Sudheer Kumar, Dept of Chemistry, (PG)",
+    "Dr. Ch. Venkata Kishore – HOD, Chem (UG)",
+    "Mr. B. Srinivas Reddy – HOD, Comm (UG)",
+    "Mr. J. LakshmanBabu – HOD, Social Sciences"
+   ],
+   "roles": [
+    "To train and recommend students for participation in intra- or inter-college events.",
+    "To ensure discipline is maintained during all events, both within and outside the college."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/sportscom"
+  },
+  {
+   "slug": "academic",
+   "name": "Academic Committee",
+   "members": [
+    "Dr. G.S.K. Chakravarty - Convenor",
+    "Dr. R.V.H. Srikanth – Vice Principal",
+    "Dr. P. Surekha – HOD, Zoology",
+    "Mr. A. Dhanaraju – Asst. Principal",
+    "Dr. R. Anjana – HOD, MBA",
+    "Mr. M. A. Prasad – HOD, MCA",
+    "Mr. B. Sudheer Kumar – HOD, Chemistry (PG)",
+    "Mr. J. Lakshmana Babu – HOD, Social Sciences",
+    "Mr. N. K. Mahesh – HOD, BBA",
+    "Mr. B. Srinivas Reddy - HOD, B.Com."
+   ],
+   "roles": [
+    "Develop an academic calendar and schedule classes, exams, and co-curricular activities in coordination with faculty and administration.",
+    "Monitor teaching standards, assessment methods, and student feedback to ensure high-quality education delivery.",
+    "Organize faculty training programs, workshops, and seminars to support professional growth and improve teaching effectiveness."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/academiccom"
+  },
+  {
+   "slug": "examination",
+   "name": "Examination Committee",
+   "members": [
+    "Dr. G. S. K. Chakravarty– Principal - Convenor",
+    "Mr. J. Lakshmana Babu – HOD, Social Sciences - Member",
+    "Mr. B. Srinivas Reddy – HOD, B.Com. - Member",
+    "Mr. N. K. Mahesh – HOD, BBA - Member",
+    "Mr. T. N. Chaitanya – Lecturer, Comp.Sc. (UG) – Member"
+   ],
+   "roles": [
+    "Assign invigilators and ensure they are briefed on examination protocols, rules, and procedures.",
+    "Implement a process for verifying student identity, managing attendance, and handling absentees.",
+    "Establish protocols for identifying and addressing instances of exam malpractice, ensuring strict adherence to disciplinary procedures."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/examination"
+  },
+  {
+   "slug": "minority-welfare",
+   "name": "Minority Students' Welfare Committee",
+   "members": [
+    "Mr. Sk. Gowsi Babu – Lecturer - Convener",
+    "Mr. Sk. Moulana Feroz – Lecturer - Member",
+    "Dr. Yasmin Mohammed – Lecturer - Member",
+    "Dr. Sharmila Begum – HOD, Biotechnology (PG) - Member",
+    "Mrs. K. Sarita – Asst. Professor - Member",
+    "Mrs. S. Husna Tasneem – Lecturer – Member"
+   ],
+   "roles": [
+    "Provide academic, emotional, and financial support to minority students to enhance their educational experience.",
+    "Promote awareness of the needs and challenges faced by minority students and advocate for inclusive policies and practices within the institution."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/minority"
+  },
+  {
+   "slug": "scholarship",
+   "name": "Scholarship Committee",
+   "members": [
+    "Mr. A. Dhanaraju – Asst. Principal",
+    "Mr. D. Venu Gopal Reddy – Office Superintendent",
+    "Mrs. K. Saritha – Sr. Asst.",
+    "Mr. M. R. L. Sharma – Jr. Asst."
+   ],
+   "roles": [
+    "Define and update eligibility criteria for scholarships based on academic performance, financial need, extracurricular involvement, or other relevant factors.",
+    "Review and process scholarship applications, ensuring that all required documents and information are submitted correctly."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/scholarship"
+  },
+  {
+   "slug": "sc-st",
+   "name": "SC / ST Committee",
+   "members": [
+    "Mr. A. Dhanaraju – Asst.Principal",
+    "Mrs. G. Rojamani –Lecturer - Comp. Sc.",
+    "Dr. E. Roopa Rani - Assoc. Prof. - MBA",
+    "Ms. G. Lavanya – Asst. Prof. - Biotech, PG",
+    "Mrs. P. Ruth Nischala – Asst. Prof. - Comp. Sc., UG"
+   ],
+   "roles": [
+    "Provide guidance on academic, financial, and personal matters to support the holistic development and well-being of SC/ST students.",
+    "Assist SC/ST students in applying for government and institutional scholarships, grants, and financial aid programs.",
+    "Establish a platform for SC/ST students to voice concerns or grievances related to discrimination, harassment, or bias, and address these issues in a fair and timely manner."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/scst"
+  },
+  {
+   "slug": "cultural",
+   "name": "Cultural Committee",
+   "members": [
+    "Mrs. L. Uma Tulasi- HOD, Dept. of Chemistry – Convenor",
+    "Mrs. Ch. Rama Kalyani – Asst. Prof., B.Com. – Member",
+    "Mrs. Swathi Krishna Yadav – Asst. Prof., Psychology – Member",
+    "Mrs. S. Rama Devi –Lecturer, Data Science – Member",
+    "Mrs. T. Sireesha – Lecturer, Physics – Member",
+    "Dr. P. V. S. Jyothi – Assoc. Prof., MBA – Member",
+    "Mrs. K. I. Priyadarshini – Asst. Prof., MBA – Member",
+    "Mrs. M. Rupasri – Asst. Prof., MCA – Member"
+   ],
+   "roles": [
+    "Plan and organize cultural events, festivals, and celebrations that encourage student participation and showcase diverse traditions and talents.",
+    "Identify students with skills in arts, music, dance, drama, and other cultural fields, providing them with opportunities to showcase and further develop their talents.",
+    "Organize the institution's annual cultural fest, coordinating activities, competitions, and performances to engage the entire student body."
+   ],
+   "official": "https://lbc.edu.in/ugcollege/cultural"
+  }
+ ],
+ "pg": [
+  {
+   "slug": "admission",
+   "name": "Admission Committee",
+   "members": [
+    "Mr. A. Dhanaraju - Convenor",
+    "Mr. P Narasimha Rao - Member",
+    "Mr. B Srinivas Reddy - Member",
+    "Mr. J LakshmanaBabu - Member",
+    "Mr. N K Mahesh - Member"
+   ],
+   "roles": [
+    "To monitor Admissions",
+    "To conduct counselling & student induction programmes"
+   ],
+   "official": "https://lbc.edu.in/pgcollege/committees"
+  },
+  {
+   "slug": "anti-ragging",
+   "name": "Anti-Ragging & Disciplinary Committee",
+   "members": [
+    "Prof.G.S.K.Chakravarty – Convener",
+    "Prof.R.V.H.Srikanth – Member",
+    "Mr.M.A.Prasad – Member",
+    "Dr.R.Anjana – Member",
+    "Dr.Rama Goswami – Member",
+    "Mrs.B.V.P.Latha – Member",
+    "Dr.P.V.S.Jyothi – Member",
+    "Dr.K.Uma Nageswari – Member",
+    "Mr.T.S.S.Ramayya – Member"
+   ],
+   "roles": [],
+   "official": "https://lbc.edu.in/pgcollege/antiragging",
+   "contacts": [
+    {
+     "name": "Prof.G.S.K.Chakravarty",
+     "status": "Convener",
+     "email": "principal@lbc.edu.in",
+     "phone": "9908034201"
+    },
+    {
+     "name": "Prof.R.V.H.Srikanth",
+     "status": "Member",
+     "email": "viceprincepal@lbc.edu.in",
+     "phone": "9849463727"
+    },
+    {
+     "name": "Mr.M.A.Prasad",
+     "status": "Member",
+     "email": "maprasad@lbc.edu.in",
+     "phone": "9441472556"
+    },
+    {
+     "name": "Dr.R.Anjana",
+     "status": "Member",
+     "email": "anjanar@lbc.edu.in",
+     "phone": "9849830162"
+    },
+    {
+     "name": "Dr.Rama Goswami",
+     "status": "Member",
+     "email": "ramagoswami@lbc.edu.in",
+     "phone": "9703353700"
+    },
+    {
+     "name": "Mrs.B.V.P.Latha",
+     "status": "Member",
+     "email": "bvplatha@lbc.edu.in",
+     "phone": "9160510515"
+    },
+    {
+     "name": "Dr.P.V.S.Jyothi",
+     "status": "Member",
+     "email": "pvsjyothi@lbc.edu.in",
+     "phone": "9701051346"
+    },
+    {
+     "name": "Dr.K.Uma Nageswari",
+     "status": "Member",
+     "email": "kumanageswari@lbc.edu.in",
+     "phone": "9640053907"
+    },
+    {
+     "name": "Mr.T.S.S.Ramayya",
+     "status": "Member",
+     "email": "tssramayya@lbc.edu.in",
+     "phone": "9912284262"
+    }
+   ]
+  },
+  {
+   "slug": "grievance-redressal",
+   "name": "Grievances & Redressal Committee",
+   "members": [
+    "Prof.G.S.K.Chakravarty – Convener",
+    "Prof.R.V.H.Srikanth – Member",
+    "Mr.M.A.Prasad – Member",
+    "Dr.R.Anjana – Member",
+    "Dr.Rama Goswami – Member",
+    "Dr.K.Uma Nageswari – Member",
+    "Mrs.M.Rupa Sri – Member"
+   ],
+   "roles": [],
+   "official": "https://lbc.edu.in/pgcollege/griviance",
+   "contacts": [
+    {
+     "name": "Prof.G.S.K.Chakravarty",
+     "status": "Convener",
+     "email": "principal@lbc.edu.in",
+     "phone": "9908034201"
+    },
+    {
+     "name": "Prof.R.V.H.Srikanth",
+     "status": "Member",
+     "email": "viceprincepal@lbc.edu.in",
+     "phone": "9849463727"
+    },
+    {
+     "name": "Mr.M.A.Prasad",
+     "status": "Member",
+     "email": "maprasad@lbc.edu.in",
+     "phone": "9441472556"
+    },
+    {
+     "name": "Dr.R.Anjana",
+     "status": "Member",
+     "email": "anjanar@lbc.edu.in",
+     "phone": "9849830162"
+    },
+    {
+     "name": "Dr.Rama Goswami",
+     "status": "Member",
+     "email": "ramagoswami@lbc.edu.in",
+     "phone": "9703353700"
+    },
+    {
+     "name": "Dr.K.Uma Nageswari",
+     "status": "Member",
+     "email": "kumanageswari@lbc.edu.in",
+     "phone": "9640053907"
+    },
+    {
+     "name": "Mrs.M.Rupa Sri",
+     "status": "Member",
+     "email": "mrupasri@lbc.edu.in",
+     "phone": "8500674289"
+    }
+   ]
+  },
+  {
+   "slug": "icc",
+   "name": "Internal Compliance Committee (ICC)",
+   "members": [
+    "Prof.R.V.H.Srikanth – Convener",
+    "Mr.C.h.Suresh – Member",
+    "Dr.D.Vijaya Lakshmi – Member",
+    "Mrs.M.Rupa Sri – Member",
+    "Mr.T.Ramana – Member",
+    "Mrs.S.Renuka Devi – Member",
+    "Mr.Gorapalli Divya – Student",
+    "Mr.Gunturu Isak John Paul – Student",
+    "Ms.N.Sriya Reddy – Student",
+    "Mr.Komma Abhishek – Student"
+   ],
+   "roles": [],
+   "official": "https://lbc.edu.in/pgcollege/internal",
+   "contacts": [
+    {
+     "name": "Prof.R.V.H.Srikanth",
+     "status": "Convener",
+     "email": "viceprincepal@lbc.edu.in",
+     "phone": "9849463727"
+    },
+    {
+     "name": "Mr.C.h.Suresh",
+     "status": "Member",
+     "email": "chsuresh@lbc.edu.in",
+     "phone": "9949285375"
+    },
+    {
+     "name": "Dr.D.Vijaya Lakshmi",
+     "status": "Member",
+     "email": "dvijayalakshmi@lbc.edu.in",
+     "phone": "9704561881"
+    },
+    {
+     "name": "Mrs.M.Rupa Sri",
+     "status": "Member",
+     "email": "mrupasri@lbc.edu.in",
+     "phone": "8500674289"
+    },
+    {
+     "name": "Mr.T.Ramana",
+     "status": "Member",
+     "email": "tramana75@gmail.com",
+     "phone": "9866295545"
+    },
+    {
+     "name": "Mrs.S.Renuka Devi",
+     "status": "Member",
+     "email": "Renukadevi.sade4@gmail.com",
+     "phone": "9963155896"
+    },
+    {
+     "name": "Mr.Gorapalli Divya",
+     "status": "Student",
+     "email": "divyagorapalli220@gmail.com",
+     "phone": "9494933535"
+    },
+    {
+     "name": "Mr.Gunturu Isak John Paul",
+     "status": "Student",
+     "email": "gunturiijak6@gmail.com",
+     "phone": "9390664923"
+    },
+    {
+     "name": "Ms.N.Sriya Reddy",
+     "status": "Student",
+     "email": "sriyareddyneelapu@gmail.com",
+     "phone": "8688482977"
+    },
+    {
+     "name": "Mr.Komma Abhishek",
+     "status": "Student",
+     "email": "Johnabhi030@gmail.com",
+     "phone": "9381911975"
+    }
+   ]
+  },
+  {
+   "slug": "entrepreneurship-cell",
+   "name": "Entrepreneurship Cell",
+   "members": [
+    "Dr. D. Vijayalakshmi - Assoc. Prof., MBA – Convener - 9704561881 - dvijayalakshmi@lbc.edu.in",
+    "Dr. S. Sharmila Begum - HOD, Biotechnology – Member - 9948685820 - sharmilabegum@lbc.edu.in",
+    "Dr. P. Nagavali - Assoc. Prof., MBA - Member - 9949386445 - pnagavali@lbc.edu.in",
+    "Dr. J. L. Purnima – Asst. Prof., BBA – Member - 9182252631 = jlpurnima@lbc.edu.in",
+    "Mrs. K. Indira Priyadarshini - Asst. Prof., MBA – Member - 990830826 - kindira@lbc.edu.in",
+    "Mr. R. Srinivasa Rao - Asst. Prof., Commerce - Member",
+    "Mr. B. Jagadeeswara Rao - Asst. Prof., Economics - member"
+   ],
+   "roles": [
+    "To foster an entrepreneurial culture among students.",
+    "To serve as a liaison between the college and industries.",
+    "To organise Entrepreneurship Awareness Camps, Entrepreneurship Development Programs, and Faculty Development initiatives.",
+    "To arrange visits to industries for aspiring entrepreneurs.",
+    "To conduct skill development training to promote self-employment.",
+    "To offer guidance and support to assist entrepreneurs in their rehabilitation.",
+    "To provide consultancy services tailored to the needs of industries and start-ups."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/Enter"
+  },
+  {
+   "slug": "iqac",
+   "name": "IQAC",
+   "members": [
+    "Prof.G.S.K.Chakravarty – Chair Person",
+    "Prof.R.V.H.Srikanth – Member",
+    "Dr.R.Anjana – Member",
+    "Mr.M.A.Prasad – Member",
+    "Dr.D.Raja Nandan – Member",
+    "Dr.D.Vijaya Lakshmi – Member"
+   ],
+   "roles": [],
+   "official": "https://lbc.edu.in/pgcollege/iqaccom",
+   "contacts": [
+    {
+     "name": "Prof.G.S.K.Chakravarty",
+     "status": "Chair Person",
+     "email": "principal@lbc.edu.in",
+     "phone": "9908034201"
+    },
+    {
+     "name": "Prof.R.V.H.Srikanth",
+     "status": "Member",
+     "email": "viceprincepal@lbc.edu.in",
+     "phone": "9849463727"
+    },
+    {
+     "name": "Dr.R.Anjana",
+     "status": "Member",
+     "email": "anjanar@lbc.edu.in",
+     "phone": "9849830162"
+    },
+    {
+     "name": "Mr.M.A.Prasad",
+     "status": "Member",
+     "email": "maprasad@lbc.edu.in",
+     "phone": "9441472556"
+    },
+    {
+     "name": "Dr.D.Raja Nandan",
+     "status": "Member",
+     "email": "drajnandan@lbc.edu.in",
+     "phone": "9491335153"
+    },
+    {
+     "name": "Dr.D.Vijaya Lakshmi",
+     "status": "Member",
+     "email": "dvijayalakshmi@lbc.edu.in",
+     "phone": "9704561881"
+    }
+   ]
+  },
+  {
+   "slug": "women-empowerment",
+   "name": "Women Empowerment Cell",
+   "members": [
+    "Dr. B. Madhavi - Asst. Prof., E.S – Convener",
+    "Mrs. V. Subba Lakshmi - Coordinator, IQAC - Member - 9440939515",
+    "Smt. I. Hymavathi - HOD, Comp. Sc. - Member",
+    "Dr. S. Sharmila Begum - HOD, Biotechnology - Member - 9948685220",
+    "Dr. R. Anjana - HOD, MBA - Member - 9849830162",
+    "Dr. Rama Goswami - Assoc. Prof., MBA - Member - 9703353700",
+    "Dr. D. Vijayalakshmi - Assoc. Prof, MBA - Member - 9704561881",
+    "Dr. P. V. S. Jyothi - Assoc. Prof., MBA - Member - 9701051346",
+    "Dr. J. L. Purnima - Asst.Prof, BBA - Member - 9182252631",
+    "Dr. K. Uma Nageswari - Assoc. Prof, MBA - Member - 9640053907"
+   ],
+   "roles": [
+    "To empower women to make life-determining decisions by addressing various societal challenges through education, awareness, literacy, and training initiatives."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/women"
+  },
+  {
+   "slug": "sports",
+   "name": "Sports Committee",
+   "members": [
+    "Dr. Y. Srinivasa Rao, Physical Director - 9703677788",
+    "Dr. B. Sudheer Kumar, Dept of Chemistry, (PG) - 9848778634",
+    "Mr. B. Srinivas Reddy – HOD, Comm (UG) - 9963778750",
+    "Mr. J. LakshmanBabu – HOD, Social Sciences - 9949231611"
+   ],
+   "roles": [
+    "To train and recommend students for participation in intra- or inter-college events.",
+    "To ensure discipline is maintained during all events, both within and outside the college."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/sportscom"
+  },
+  {
+   "slug": "academic",
+   "name": "Academic Committee",
+   "members": [
+    "Dr. G.S.K. Chakravarty - Convenor",
+    "Dr. R.V.H. Srikanth – Vice Principal",
+    "Dr. P. Surekha – HOD, Zoology",
+    "Mr. A. Dhanaraju – Asst. Principal",
+    "Dr. R. Anjana – HOD, MBA - 9849830162",
+    "Mr. M. A. Prasad – HOD, MCA - 9441472556",
+    "Mr. B. Sudheer Kumar – HOD, Chemistry (PG) - 9848778634",
+    "Mr. J. Lakshmana Babu – HOD, Social Sciences",
+    "Mr. N. K. Mahesh – HOD, BBA - 9985269200",
+    "Mr. B. Srinivas Reddy - HOD, B.Com."
+   ],
+   "roles": [
+    "Develop an academic calendar and schedule classes, exams, and co-curricular activities in coordination with faculty and administration.",
+    "Monitor teaching standards, assessment methods, and student feedback to ensure high-quality education delivery.",
+    "Organize faculty training programs, workshops, and seminars to support professional growth and improve teaching effectiveness."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/academiccom"
+  },
+  {
+   "slug": "examination",
+   "name": "Examination Committee",
+   "members": [
+    "Dr. G. S. K. Chakravarty– Principal - Convenor - 9854688824 = principal@lbc.edu.in",
+    "Mr. J. Lakshmana Babu – HOD, Social Sciences - Member",
+    "Mr. B. Srinivas Reddy – HOD, B.Com. - Member",
+    "Mr. N. K. Mahesh – HOD, BBA - Member - 9985269200 - kmahesh@lbc.edu.in",
+    "Mr. T. N. Chaitanya – Lecturer, Comp.Sc. (UG) – Member"
+   ],
+   "roles": [
+    "Assign invigilators and ensure they are briefed on examination protocols, rules, and procedures.",
+    "Implement a process for verifying student identity, managing attendance, and handling absentees.",
+    "Establish protocols for identifying and addressing instances of exam malpractice, ensuring strict adherence to disciplinary procedures."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/examination"
+  },
+  {
+   "slug": "minority-welfare",
+   "name": "Minority Students' Welfare Committee",
+   "members": [
+    "Mr. Sk. Gowsi Babu – Lecturer - Convener - 9848424955",
+    "Mr. Sk. Moulana Feroz – Lecturer - Member - 8074619003",
+    "Dr. Yasmin Mohammed – Lecturer - Member",
+    "Dr. Sharmila Begum – HOD, Biotechnology (PG) - Member - 9948685220",
+    "Mrs. K. Sarita – Asst. Professor - Member - 8919203678",
+    "Mrs. S. Husna Tasneem – Lecturer – Member - 9705693732"
+   ],
+   "roles": [
+    "Provide academic, emotional, and financial support to minority students to enhance their educational experience.",
+    "Promote awareness of the needs and challenges faced by minority students and advocate for inclusive policies and practices within the institution."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/minority"
+  },
+  {
+   "slug": "scholarship",
+   "name": "Scholarship Committee",
+   "members": [
+    "Mr. A. Dhanaraju – Asst. Principal - 9030077303",
+    "Mr. D. Venu Gopal Reddy – Office Superintendent - 9705651266",
+    "Mrs. K. Saritha – Sr. Asst. - 8919203676",
+    "Mr. M. R. L. Sharma – Jr. Asst. - 9618323557"
+   ],
+   "roles": [
+    "Define and update eligibility criteria for scholarships based on academic performance, financial need, extracurricular involvement, or other relevant factors.",
+    "Review and process scholarship applications, ensuring that all required documents and information are submitted correctly."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/scholarship"
+  },
+  {
+   "slug": "sc-st",
+   "name": "SC / ST Committee",
+   "members": [
+    "Prof.G.S.K.Chakravarty – Convener",
+    "Prof.R.V.H.Srikanth – Member",
+    "Mr.C.h.Suresh – Member",
+    "Dr.E.Roopa Rani – Member",
+    "Mrs.M.Rupa Sri – Member",
+    "Mr.T.Ramana – Member",
+    "Mrs.S.Renuka Devi – Member",
+    "Mr.Gorapalli Divya – Student",
+    "Mr.Gunturu Isak John Paul – Student",
+    "Ms.N.Sriya Reddy – Student",
+    "Mr.Komma Abhishek – Student"
+   ],
+   "roles": [],
+   "official": "https://lbc.edu.in/pgcollege/scst",
+   "contacts": [
+    {
+     "name": "Prof.G.S.K.Chakravarty",
+     "status": "Convener",
+     "email": "principal@lbc.edu.in",
+     "phone": "9908034201"
+    },
+    {
+     "name": "Prof.R.V.H.Srikanth",
+     "status": "Member",
+     "email": "viceprincepal@lbc.edu.in",
+     "phone": "9849463727"
+    },
+    {
+     "name": "Mr.C.h.Suresh",
+     "status": "Member",
+     "email": "chsuresh@lbc.edu.in",
+     "phone": "9949285375"
+    },
+    {
+     "name": "Dr.E.Roopa Rani",
+     "status": "Member",
+     "email": "erooparani@lbc.edu.in",
+     "phone": "8019876523"
+    },
+    {
+     "name": "Mrs.M.Rupa Sri",
+     "status": "Member",
+     "email": "mrupasri@lbc.edu.in",
+     "phone": "8500674289"
+    },
+    {
+     "name": "Mr.T.Ramana",
+     "status": "Member",
+     "email": "tramana75@gmail.com",
+     "phone": "9866295545"
+    },
+    {
+     "name": "Mrs.S.Renuka Devi",
+     "status": "Member",
+     "email": "Renukadevi.sade4@gmail.com",
+     "phone": "9963155896"
+    },
+    {
+     "name": "Mr.Gorapalli Divya",
+     "status": "Student",
+     "email": "divyagorapalli220@gmail.com",
+     "phone": "9494933535"
+    },
+    {
+     "name": "Mr.Gunturu Isak John Paul",
+     "status": "Student",
+     "email": "gunturiijak6@gmail.com",
+     "phone": "9390664923"
+    },
+    {
+     "name": "Ms.N.Sriya Reddy",
+     "status": "Student",
+     "email": "sriyareddyneelapu@gmail.com",
+     "phone": "8688482977"
+    },
+    {
+     "name": "Mr.Komma Abhishek",
+     "status": "Student",
+     "email": "Johnabhi030@gmail.com",
+     "phone": "9381911975"
+    }
+   ]
+  },
+  {
+   "slug": "cultural",
+   "name": "Cultural Committee",
+   "members": [
+    "Mrs. L. Uma Tulasi- HOD, Dept. of Chemistry – Convenor",
+    "Mrs. Ch. Rama Kalyani – Asst. Prof., B.Com. – Member",
+    "Mrs. Swathi Krishna Yadav – Asst. Prof., Psychology – Member",
+    "Mrs. S. Rama Devi –Lecturer, Data Science – Member",
+    "Mrs. T. Sireesha – Lecturer, Physics – Member",
+    "Dr. P. V. S. Jyothi – Assoc. Prof., MBA – Member - 9701051346",
+    "Mrs. K. I. Priyadarshini – Asst. Prof., MBA – Member - 9908308286",
+    "Mrs. M. Rupasri – Asst. Prof., MCA – Member - 8500674289"
+   ],
+   "roles": [
+    "Plan and organize cultural events, festivals, and celebrations that encourage student participation and showcase diverse traditions and talents.",
+    "Identify students with skills in arts, music, dance, drama, and other cultural fields, providing them with opportunities to showcase and further develop their talents.",
+    "Organize the institution's annual cultural fest, coordinating activities, competitions, and performances to engage the entire student body."
+   ],
+   "official": "https://lbc.edu.in/pgcollege/cultural"
+  }
+ ]
+}
