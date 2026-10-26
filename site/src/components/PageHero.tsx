@@ -55,37 +55,118 @@ export function PageHero({
 
   return (
     <div ref={ref}>
-      <Spotlight className="navy-drift relative overflow-hidden pt-44 pb-20 text-white sm:pt-52 sm:pb-24">
-        {/* drifting gold glow behind the seal */}
-        <motion.div
+      <Spotlight className="relative overflow-hidden bg-navy pt-44 pb-28 text-white sm:pt-52 sm:pb-32">
+        {/* 1 — aurora: slow-moving blobs of royal, deep blue and gold light */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,#0b2036_0%,#102a43_40%,#16365a_70%,#0f2740_100%)]" />
+          <motion.div style={{ y: glowY }} className="absolute -top-40 -left-32 h-[560px] w-[560px] rounded-full bg-royal/35 blur-[110px]" animate={reduce ? undefined : { x: [0, 80, 0] }} transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }} />
+          <motion.div className="absolute -bottom-48 left-1/3 h-[480px] w-[620px] rounded-full bg-[#1d4f7a]/40 blur-[120px]" animate={reduce ? undefined : { x: [0, -90, 0] }} transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }} />
+          <motion.div className="absolute top-10 right-[10%] h-[420px] w-[420px] rounded-full bg-gold/20 blur-[100px]" animate={reduce ? undefined : { scale: [1, 1.18, 1], opacity: [0.6, 1, 0.6] }} transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }} />
+        </div>
+
+        {/* 2 — fine gold grid in perspective, flowing toward the viewer */}
+        <div
           aria-hidden="true"
-          style={{ y: glowY }}
-          className="pointer-events-none absolute top-1/2 right-[8%] h-[560px] w-[560px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(214_173_96/0.22),transparent_65%)]"
-          animate={reduce ? undefined : { scale: [1, 1.08, 1], opacity: [0.7, 1, 0.7] }}
-          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[70%] opacity-40"
+          style={{
+            backgroundImage: 'linear-gradient(rgb(214 173 96 / 0.18) 1px, transparent 1px), linear-gradient(90deg, rgb(214 173 96 / 0.18) 1px, transparent 1px)',
+            backgroundSize: '56px 56px',
+            transform: 'perspective(700px) rotateX(58deg)',
+            transformOrigin: 'bottom',
+            maskImage: 'linear-gradient(to top, #000 0%, transparent 85%)',
+            WebkitMaskImage: 'linear-gradient(to top, #000 0%, transparent 85%)',
+            animation: reduce ? undefined : 'grid-flow 6s linear infinite',
+          }}
         />
 
-        {/* seal: turns into place, keeps its slow rotation, drifts with scroll */}
+        {/* 3 — giant outlined title watermark */}
+        <motion.p
+          aria-hidden="true"
+          className="display pointer-events-none absolute bottom-4 left-0 hidden whitespace-nowrap text-[12rem] leading-none text-transparent select-none lg:block"
+          style={{ WebkitTextStroke: '1px rgb(255 255 255 / 0.07)' }}
+          initial={reduce ? false : { opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.8, ease: EASE }}
+        >
+          {title}
+        </motion.p>
+
+        {/* 4 — rising gold particles */}
+        {!reduce && (
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+            {Array.from({ length: 18 }, (_, i) => (
+              <span
+                key={i}
+                className="absolute -bottom-2 rounded-full bg-gold-2"
+                style={{
+                  left: `${(i * 53) % 100}%`,
+                  width: 2 + (i % 3),
+                  height: 2 + (i % 3),
+                  boxShadow: '0 0 8px rgb(232 203 138 / 0.9)',
+                  animation: `rise-up ${9 + (i % 5) * 2}s linear ${(i * 0.7) % 9}s infinite`,
+                }}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* 5 — seal inside orbiting rings */}
         <motion.div
           aria-hidden="true"
           style={{ y: sealY }}
-          className="pointer-events-none absolute top-1/2 -right-28 -mt-[260px] h-[520px] w-[520px] sm:-right-16"
-          initial={reduce ? false : { opacity: 0, scale: 0.82, rotate: -40 }}
+          className="pointer-events-none absolute top-[100px] -right-10 h-[160px] w-[160px] sm:top-[150px] sm:right-10 sm:h-[280px] sm:w-[280px] lg:top-[170px] lg:right-[8%] lg:h-[340px] lg:w-[340px]"
+          initial={reduce ? false : { opacity: 0, scale: 0.7, rotate: -50 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1.6, ease: EASE }}
+          transition={{ duration: 1.8, ease: EASE }}
         >
-          <Seal className="h-full w-full" opacity={0.85} />
+          <span className="absolute -inset-[16%] rounded-full border border-dashed border-gold/30" style={{ animation: reduce ? undefined : 'spin-slow 60s linear infinite reverse' }}>
+            <span className="absolute top-1/2 -left-1.5 h-3 w-3 -translate-y-1/2 rounded-full bg-gold shadow-[0_0_16px_4px_rgb(214_173_96/0.7)]" />
+          </span>
+          <span className="absolute -inset-[6%] rounded-full border border-white/15" style={{ animation: reduce ? undefined : 'spin-slow 24s linear infinite' }}>
+            <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-white shadow-[0_0_12px_3px_rgb(255_255_255/0.6)]" />
+            <span className="absolute -bottom-1 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-gold-2" />
+          </span>
+          {!reduce && (
+            <span
+              className="absolute -inset-[3%] rounded-full opacity-60 blur-md"
+              style={{ background: 'conic-gradient(from 0deg, transparent 0 70%, rgb(232 203 138 / 0.55) 85%, transparent 100%)', animation: 'spin-slow 8s linear infinite' }}
+            />
+          )}
+          {!reduce && <span className="absolute inset-[8%] rounded-full bg-gold/25 blur-2xl" style={{ animation: 'pulse-glow 4s ease-in-out infinite' }} />}
+          <Seal className="relative h-full w-full opacity-70 sm:opacity-100" opacity={0.9} shine />
+          {!reduce &&
+            [
+              { t: '-4%', l: '14%', d: '0s', s: 16 },
+              { t: '80%', l: '-6%', d: '1.4s', s: 11 },
+              { t: '12%', l: '96%', d: '2.3s', s: 13 },
+              { t: '96%', l: '74%', d: '3.1s', s: 10 },
+              { t: '46%', l: '104%', d: '0.8s', s: 8 },
+            ].map((p, i) => (
+              <svg key={i} viewBox="0 0 16 16" className="absolute text-gold-2" style={{ top: p.t, left: p.l, width: p.s, height: p.s, animation: `twinkle 3.6s ease-in-out ${p.d} infinite` }}>
+                <path fill="currentColor" d="M8 0c.6 4.6 2.8 6.9 8 8-5.2 1.1-7.4 3.4-8 8-.6-4.6-2.8-6.9-8-8 5.2-1.1 7.4-3.4 8-8Z" />
+              </svg>
+            ))}
         </motion.div>
 
-        {/* one band of warm light sweeping across on load */}
+        {/* 6 — light sweep on load */}
         {!reduce && (
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div
-              className="absolute inset-y-0 left-0 w-1/3"
-              style={{ background: 'linear-gradient(90deg, transparent, rgb(255 222 160 / 0.10), transparent)', animation: 'sweep 3.2s ease-in-out 0.4s both' }}
-            />
+            <div className="absolute inset-y-0 left-0 w-1/3" style={{ background: 'linear-gradient(90deg, transparent, rgb(255 222 160 / 0.12), transparent)', animation: 'sweep 3.2s ease-in-out 0.4s both' }} />
           </div>
         )}
+
+        {/* 7 — curved bottom edge with a gold rim that draws in */}
+        <svg aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none" className="pointer-events-none absolute inset-x-0 -bottom-px h-12 w-full sm:h-16">
+          <defs>
+            <linearGradient id="heroRim" x1="0" x2="1">
+              <stop offset="0" stopColor="#d6ad60" stopOpacity="0" />
+              <stop offset="0.5" stopColor="#e8cb8a" />
+              <stop offset="1" stopColor="#d6ad60" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path d="M0 80 L0 40 Q720 -20 1440 40 L1440 80 Z" fill="var(--color-mist)" />
+          <motion.path d="M0 40 Q720 -20 1440 40" fill="none" stroke="url(#heroRim)" strokeWidth="2" initial={reduce ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.8, delay: 0.6, ease: 'easeInOut' }} />
+        </svg>
 
         <motion.div style={{ y: copyY, opacity: copyO }} className="container-x relative">
           <motion.div initial={reduce ? false : 'hidden'} animate="show" variants={{ show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}>
@@ -122,8 +203,18 @@ export function PageHero({
 
             <div className="mt-8 max-w-3xl">
               {eyebrow && (
-                <motion.p variants={rise} className="text-base font-semibold text-gold-2">
-                  {eyebrow}
+                <motion.p variants={rise} className="inline-flex items-center gap-3 text-base font-semibold">
+                  <span className="h-px w-8 bg-gold" aria-hidden="true" />
+                  <span
+                    className="bg-clip-text text-transparent"
+                    style={{
+                      backgroundImage: 'linear-gradient(90deg, #d6ad60 0%, #f6e3b4 25%, #d6ad60 50%, #f6e3b4 75%, #d6ad60 100%)',
+                      backgroundSize: '200% 100%',
+                      animation: reduce ? undefined : 'text-shimmer 4s linear infinite',
+                    }}
+                  >
+                    {eyebrow}
+                  </span>
                 </motion.p>
               )}
               <motion.h1

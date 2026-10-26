@@ -1,7 +1,6 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { college, off, PAYMENT_URL, social, type NavLink } from '../content/site'
-import { Seal } from './Effects'
 import { SmartLink } from './SmartLink'
 
 const columns: { title: string; links: NavLink[] }[] = [
@@ -61,7 +60,6 @@ export function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="relative overflow-hidden bg-navy text-white">
-      <Seal still opacity={0.4} className="absolute -right-20 -bottom-20 h-[380px] w-[380px]" />
       <div className="container-x relative pt-20 pb-10">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr]">
           <div>

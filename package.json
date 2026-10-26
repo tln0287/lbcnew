@@ -1,0 +1,14 @@
+{
+  "name": "lbc-website-root",
+  "private": true,
+  "description": "Convenience scripts so npm commands work from the repository root; the app lives in ./site",
+  "scripts": {
+    "dev": "npm --prefix site run dev",
+    "build": "npm --prefix site run build",
+    "preview": "npm --prefix site run preview",
+    "install:site": "npm --prefix site install",
+    "data": "npm --prefix site run data",
+    "docs": "npm --prefix site run docs",
+    "test:smoke": "npm --prefix site run test:smoke"
+  }
+}

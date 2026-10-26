@@ -79,16 +79,28 @@ export function Spotlight({ children, className = '', as: Tag = 'section', ...re
 }
 
 /** The college seal in white at low opacity; one turn per 120s unless static. */
-export function Seal({ className = '', opacity = 0.4, still = false }: { className?: string; opacity?: number; still?: boolean }) {
+export function Seal({ className = '', opacity = 0.4, still = false, shine = false }: { className?: string; opacity?: number; still?: boolean; shine?: boolean }) {
   const reduce = useReducedMotion()
+  const mask = { WebkitMaskImage: 'url(/brand/seal-white.png)', maskImage: 'url(/brand/seal-white.png)', WebkitMaskSize: 'contain', maskSize: 'contain', WebkitMaskRepeat: 'no-repeat', maskRepeat: 'no-repeat' } as const
   return (
-    <img
-      src="/brand/seal-white.png"
-      alt=""
+    <span
       aria-hidden="true"
-      className={`pointer-events-none select-none ${className}`}
-      style={{ opacity, filter: 'drop-shadow(0 0 1px rgb(255 255 255 / 0.6))', animation: still || reduce ? undefined : 'spin-slow 120s linear infinite' }}
-    />
+      className={`pointer-events-none block select-none ${className.includes("absolute") ? "" : "relative "}${className}`}
+      style={{ animation: still || reduce ? undefined : 'spin-slow 120s linear infinite' }}
+    >
+      <img src="/brand/seal-white.png" alt="" className="h-full w-full" style={{ opacity, filter: 'drop-shadow(0 0 1px rgb(255 255 255 / 0.6))' }} />
+      {shine && !reduce && (
+        <span
+          className="absolute inset-0"
+          style={{
+            ...mask,
+            backgroundImage: 'linear-gradient(115deg, transparent 38%, rgb(255 244 214 / 0.95) 50%, transparent 62%)',
+            backgroundSize: '260% 260%',
+            animation: 'seal-shine 4.5s ease-in-out infinite',
+          }}
+        />
+      )}
+    </span>
   )
 }
 
