@@ -3,14 +3,15 @@
 //   .vercel/output/functions/api.func/  the API server bundled into one file, plus its SQL migrations
 //   .vercel/output/config.json          routes: /api/* -> function, /docs/* -> lbc.edu.in, SPA fallback
 //
-// Run by Vercel (vercel.json buildCommand). Locally: node tools/vercel-build.mjs
+// Run by Vercel (site/vercel.json buildCommand, Root Directory = site). Locally: cd site && node ../tools/vercel-build.mjs
 import { execSync } from 'node:child_process'
 import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { build } from '../server/node_modules/esbuild/lib/main.js'
 
 const root = join(import.meta.dirname, '..')
-const out = join(root, '.vercel', 'output')
+// Vercel looks for .vercel/output in the project's Root Directory (site/ on the lbcnew project), i.e. the cwd
+const out = join(process.cwd(), '.vercel', 'output')
 const fn = join(out, 'functions', 'api.func')
 
 rmSync(out, { recursive: true, force: true })
