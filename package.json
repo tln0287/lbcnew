@@ -1,12 +1,20 @@
 {
   "name": "lbc-website-root",
   "private": true,
-  "description": "Convenience scripts so npm commands work from the repository root; the app lives in ./site",
+  "description": "Convenience scripts so npm commands work from the repository root; the site lives in ./site, the API in ./server",
   "scripts": {
     "dev": "npm --prefix site run dev",
     "build": "npm --prefix site run build",
     "preview": "npm --prefix site run preview",
     "install:site": "npm --prefix site install",
+    "install:server": "npm --prefix server install",
+    "server": "npm --prefix server run dev",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose stop db",
+    "db:migrate": "npm --prefix server run migrate",
+    "db:backup": "node tools/db_backup.mjs backup",
+    "db:restore": "node tools/db_backup.mjs restore",
+    "admin": "npm --prefix server run admin --",
     "data": "npm --prefix site run data",
     "docs": "npm --prefix site run docs",
     "test:smoke": "npm --prefix site run test:smoke"

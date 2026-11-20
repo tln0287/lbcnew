@@ -26,7 +26,7 @@ ROUTES = [
     "/activities/bharat-scouts-guides", "/committees", "/committees/anti-ragging", "/iqac",
     "/naac", "/naac?view=dvv&c=5", "/nirf", "/rti", "/aicte", "/placements", "/gallery",
     "/campus-glimpses", "/lbc-times", "/bgv", "/contact", "/search?q=chemistry", "/sitemap",
-    "/newsletters", "/newsletters/the-lbc-times", "/newsletters/campus-glimpses-july-2025", "/leadership/1",
+    "/newsletters", "/newsletters/the-lbc-times", "/newsletters/campus-glimpses-july-2025", "/leadership/1", "/apply",
 ]
 
 problems = []

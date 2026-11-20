@@ -1,0 +1,26 @@
+{
+  "name": "lbc-server",
+  "private": true,
+  "type": "module",
+  "description": "API for PG admission applications (PostgreSQL) and host for the built site",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "migrate": "node --env-file-if-exists=.env src/migrate.ts",
+    "admin": "node --env-file-if-exists=.env src/admin-cli.ts",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.19.2",
+    "@types/pg": "^8.23.1",
+    "typescript": "~7.0.2"
+  }
+}

@@ -4,3 +4,7 @@ tools/reports/screenshots
 __pycache__
 site/public/docs
 *.part
+
+.env
+server/.env
+backups

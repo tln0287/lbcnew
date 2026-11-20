@@ -5,8 +5,9 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // listen on IPv4 and IPv6 so both http://localhost and http://127.0.0.1 work
-  server: { host: true },
-  preview: { host: true },
+  // /api goes to the LBC server (server/, `npm run server`), which talks to PostgreSQL
+  server: { host: true, proxy: { '/api': 'http://localhost:8787' } },
+  preview: { host: true, proxy: { '/api': 'http://localhost:8787' } },
   build: {
     rollupOptions: {
       output: {

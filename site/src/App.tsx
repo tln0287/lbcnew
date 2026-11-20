@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { BackToTop, ScrollProgress } from './components/Effects'
 import { Footer } from './components/Footer'
@@ -31,16 +31,26 @@ const CampusGlimpses = lazy(() => import('./pages/CampusGlimpses'))
 const LBCTimes = lazy(() => import('./pages/LBCTimes'))
 const BGV = lazy(() => import('./pages/BGV'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Apply = lazy(() => import('./pages/Apply'))
 const SearchPage = lazy(() => import('./pages/Search'))
 const Sitemap = lazy(() => import('./pages/Sitemap'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 const NewsletterReader = lazy(() => import('./pages/NewsletterReader'))
 const NewsletterIndex = lazy(() => import('./pages/NewsletterReader').then((m) => ({ default: m.NewsletterIndex })))
 const LeadershipMessage = lazy(() => import('./pages/LeadershipMessage'))
+const Admin = lazy(() => import('./pages/admin/Admin'))
+
+/** Routes whose sub-pages swap content in place: same page instance, no scroll jump. */
+const IN_PLACE = ['/committees']
+const pageKey = (path: string) => IN_PLACE.find((p) => path === p || path.startsWith(`${p}/`)) ?? path
 
 function ScrollManager() {
   const { pathname, hash, search } = useLocation()
+  const prev = useRef(pathname)
   useEffect(() => {
+    const inPlace = prev.current !== pathname && pageKey(prev.current) === pageKey(pathname)
+    prev.current = pathname
+    if (inPlace && !hash) return
     if (hash) {
       // wait for lazily loaded content to render
       let tries = 0
@@ -72,7 +82,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <motion.main
         id="main"
-        key={location.pathname}
+        key={pageKey(location.pathname)}
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={reduce ? undefined : { opacity: 0 }}
@@ -107,6 +117,7 @@ function AnimatedRoutes() {
             <Route path="/lbc-times" element={<LBCTimes />} />
             <Route path="/bgv" element={<BGV />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/apply" element={<Apply />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/newsletters" element={<NewsletterIndex />} />
@@ -120,15 +131,33 @@ function AnimatedRoutes() {
   )
 }
 
-export default function App() {
+/** The admissions dashboard (/admin) has its own layout; everything else gets the public site chrome. */
+function Shell() {
+  const { pathname } = useLocation()
+  if (pathname === '/admin' || pathname.startsWith('/admin/'))
+    return (
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/admin/*" element={<Admin />} />
+        </Routes>
+      </Suspense>
+    )
   return (
-    <BrowserRouter>
-      <ScrollManager />
+    <>
       <ScrollProgress />
       <Header />
       <AnimatedRoutes />
       <Footer />
       <BackToTop />
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollManager />
+      <Shell />
     </BrowserRouter>
   )
 }

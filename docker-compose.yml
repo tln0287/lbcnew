@@ -1,0 +1,50 @@
+# PostgreSQL + the LBC server (API and built site).
+#
+# Development: start only the database, then run the server and site with npm:
+#   docker compose up -d db
+# Everything (production-like), on http://localhost:8787:
+#   docker compose up -d --build
+#
+# Settings come from a .env file next to this one (see .env.example).
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: lbc
+      POSTGRES_USER: lbc
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-lbc-dev-password}
+      TZ: Asia/Kolkata
+    ports:
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lbc -d lbc"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://lbc:${POSTGRES_PASSWORD:-lbc-dev-password}@db:5432/lbc
+      PORT: 8787
+      SITE_DIR: /app/site/dist
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      TRUST_PROXY: ${TRUST_PROXY:-0}
+    ports:
+      - "${APP_PORT:-8787}:8787"
+    volumes:
+      # the mirrored documents (npm run docs) are too large for the image; serve them from the host
+      - ./site/public/docs:/app/site/dist/docs:ro
+
+volumes:
+  pgdata:

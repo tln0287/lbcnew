@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+# ~6 GB of mirrored documents: mounted into the container instead (docker-compose.yml)
+site/public/docs
+.git
+crawl-snapshot
+source-media
+tools
+backups
+**/.env

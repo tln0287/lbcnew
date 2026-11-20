@@ -33,6 +33,83 @@ npm run build        # production build in site/dist
 npm run preview      # serve the build on http://localhost:4173
 ```
 
+## Online applications (API + PostgreSQL)
+
+The PG admission form at `/apply` submits to a small Node server in `server/`,
+which stores applications in PostgreSQL. Each submission gets an application
+number, `LBCPG-<year>-<serial>` (e.g. `LBCPG-2026-00001`; the serial restarts
+every year). It is printed at the top of both pages of the form. The applicant's
+browser keeps the number and a private edit key, so corrections update the same
+application (same number) until the office moves it out of “Submitted”. Office
+staff manage applications at **`/admin`**.
+
+```
+server/
+  src/index.ts        Express app: /api routes, serves site/dist in production
+  src/applications.ts Public submit/update/status API and the admin API
+  src/auth.ts         Admin passwords (scrypt), sessions (httpOnly cookie), rate limits
+  src/migrate.ts      Applies migrations/*.sql in order on start-up
+  migrations/         Database schema; add 002_….sql etc. for changes, never edit an applied file
+site/src/lib/application.ts   Form fields + validation, shared by the page and the server
+docker-compose.yml    PostgreSQL 17 (+ the app for production)
+tools/db_backup.mjs   Database backup / restore
+```
+
+Requires Node 24+ and Docker Desktop (or any PostgreSQL 15+ and a `DATABASE_URL`).
+
+### Run locally
+
+```bash
+npm run install:site && npm run install:server
+cp server/.env.example server/.env      # then set ADMIN_PASSWORD (10+ characters)
+npm run db:up                           # PostgreSQL in Docker on localhost:5433
+npm run server                          # API on :8787 (migrates and creates the first admin)
+npm run dev                             # site on :5173, proxies /api to the server
+```
+
+Open http://localhost:5173/apply to apply and http://localhost:5173/admin to sign in.
+
+### Administrators
+
+```bash
+npm run admin -- list
+npm run admin -- add <username>         # prompts for a password
+npm run admin -- password <username>    # resets it and signs that admin out everywhere
+npm run admin -- remove <username>
+```
+
+### Dashboard
+
+- Status tiles (all / submitted / under review / admitted / not admitted) double as filters.
+- Search by application number, name, phone, email or hall ticket; filter by course, sort by date, name or rank.
+- Each application shows the filled-in form with photo (print or download as PDF), a status switch,
+  private office notes, who changed the status and when, and any other applications with the same Aadhaar.
+- **Export CSV** downloads the current filtered list for Excel. Aadhaar is left out of the export.
+
+### Maintaining the database
+
+```bash
+npm run db:backup                       # backups/lbc-YYYY-MM-DD-HHMM.dump (pg_dump custom format)
+npm run db:restore -- backups/<file>.dump   # replaces all current data; asks for confirmation
+```
+
+Schedule `npm run db:backup` daily (Windows Task Scheduler / cron) and copy `backups/`
+off the server. The data lives in the `pgdata` Docker volume, so `docker compose down -v` deletes it. Never use `-v`
+on the server. To change the schema, add a new numbered file in `server/migrations/`.
+It is applied automatically the next time the server starts (or with `npm run db:migrate`).
+
+### Production
+
+```bash
+cp .env.example .env      # set POSTGRES_PASSWORD, ADMIN_PASSWORD, COOKIE_SECURE=true
+docker compose up -d --build              # site + API on :8787, PostgreSQL alongside
+```
+
+Put it behind HTTPS (IIS with ARR/URL Rewrite, or nginx) and set `TRUST_PROXY=1`.
+If the static site stays on IIS instead, reverse-proxy only `/api/*` to the Node server.
+Either way, `/admin` must be served over HTTPS because it carries staff sessions and applicant data.
+The mirrored documents are mounted into the container from `site/public/docs`.
+
 ## Updating content from the official site
 
 The Python tools need Python 3.10+ with `beautifulsoup4`, `lxml`, `Pillow`

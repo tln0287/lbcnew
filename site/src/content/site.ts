@@ -247,6 +247,7 @@ export const committeeLinks: NavLink[] = [
 ].map(([slug, label]) => ({ label, to: `/committees/${slug}` }))
 
 export const secondaryNav: NavItem[] = [
+  { label: 'Apply for admission', to: '/apply' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'RTI', to: '/rti', groups: [{ title: 'RTI', links: [{ label: 'RTI-2005', href: rtiDocs[0].href }, { label: 'RTI page', to: '/rti' }] }] },
   { label: 'NIRF', to: '/nirf', groups: [{ title: 'NIRF reports', links: nirfReports }] },

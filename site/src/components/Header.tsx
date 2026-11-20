@@ -142,7 +142,9 @@ function DesktopItem({
       ? `relative inline-flex items-center whitespace-nowrap rounded-full px-2.5 py-2 text-[13.5px] font-bold transition 2xl:px-3.5 ${
           solid ? 'text-navy hover:text-royal' : 'text-white hover:text-gold-2'
         }`
-      : 'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1.5 text-[12.5px] font-medium text-white/80 transition hover:text-gold-2'
+      : item.to === '/apply'
+        ? 'inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-gold/15 px-3 py-1 text-[12.5px] font-bold text-gold-2 ring-1 ring-gold/40 transition hover:bg-gold hover:text-navy'
+        : 'inline-flex items-center gap-1 whitespace-nowrap px-2 py-1.5 text-[12.5px] font-medium text-white/80 transition hover:text-gold-2'
 
   const underline = active && tier === 'primary' && <motion.span layoutId="nav-active" className="absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full bg-gold" />
 
@@ -415,6 +417,9 @@ export function Header() {
                 </button>
               </div>
               <nav aria-label="Mobile" className="px-3 pb-16">
+                <Link to="/apply" onClick={() => setMobile(false)} className="btn-gold mx-2 mb-2 flex">
+                  Apply for admission
+                </Link>
                 <div className="mx-2 mb-4 grid grid-cols-2 gap-2">
                   <a href={PAYMENT_URL} target="_blank" rel="noopener noreferrer" className="btn-gold !px-3">
                     <CreditCard className="h-4 w-4" aria-hidden="true" /> Online Payment
