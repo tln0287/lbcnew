@@ -35,7 +35,8 @@ export async function api<T>(path: string, init: { method?: string; body?: unkno
   }
   if (!res.ok) {
     const b = body && typeof body === 'object' ? (body as ApiError['body']) : {}
-    if (!b.error) b.error = res.status >= 500 || res.status === 404 ? 'The application service is unavailable right now. Please try again in a few minutes.' : `Request failed (${res.status}).`
+    // only our own server sends a text `error`; a platform error page (e.g. a crashed function) may send an object
+    if (typeof b.error !== 'string' || !b.error) b.error = res.status >= 500 || res.status === 404 ? 'The application service is unavailable right now. Please try again in a few minutes.' : `Request failed (${res.status}).`
     throw new ApiError(res.status, b)
   }
   return body as T
