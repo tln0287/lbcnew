@@ -5,7 +5,8 @@ if (!process.env.DATABASE_URL) {
   process.exit(1)
 }
 
-export const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 10 })
+// serverless instances each hold their own pool, so keep it small on Vercel
+export const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: process.env.VERCEL ? 3 : 10 })
 pool.on('error', (err) => console.error('PostgreSQL pool error', err))
 
 /** Runs `fn` inside a transaction, committing on success and rolling back on any error. */

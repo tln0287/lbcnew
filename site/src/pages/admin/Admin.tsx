@@ -732,7 +732,7 @@ function ApplicationDetail() {
           )}
         </aside>
 
-        <section className="min-w-0 rounded-2xl bg-white p-3 sm:p-6" aria-label="Application form">
+        <section className="min-w-0 rounded-2xl bg-[#e3e6ea] p-3 shadow-inner sm:p-8" aria-label="Application form">
           <SheetPreview>
             <ApplicationSheet f={f} date={dateOnly(d.submittedAt)} appNo={d.appNo} />
           </SheetPreview>

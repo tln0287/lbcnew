@@ -1,0 +1,10 @@
+# Not uploaded to Vercel. The mirrored documents (~6 GB) are served from lbc.edu.in via a redirect.
+site/public/docs
+**/node_modules
+**/dist
+.vercel/output
+crawl-snapshot
+source-media
+tools/reports
+backups
+**/.env

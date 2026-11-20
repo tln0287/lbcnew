@@ -8,3 +8,5 @@ site/public/docs
 .env
 server/.env
 backups
+
+.vercel
